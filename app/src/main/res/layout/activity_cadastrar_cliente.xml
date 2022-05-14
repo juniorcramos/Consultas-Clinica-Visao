@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/corDeFundoClara"
-    tools:context=".CadastroCliente">
+    tools:context=".activity_cadastrar_cliente">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -36,15 +36,26 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
+
             android:layout_weight="7"
             android:background="@color/corDeFundoClara"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="5"
+                android:layout_height="447dp"
+                android:layout_weight="22"
                 android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/corMedia"
+                    android:text="Dados do Cliente"
+                    android:textAlignment="center"
+                    android:textColor="@color/corDeFundoEscura"
+                    android:textSize="20dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -95,8 +106,43 @@
                         android:layout_weight="1"
                         android:ems="10"
                         android:hint="digite aqui o Endereço"
-                        android:inputType="number" />
+                        android:inputType="text" />
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="83dp"
+                        android:layout_height="wrap_content"
+                        android:text="Telefone: "
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="15dp">
+
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/editTextTelefone"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="digite aqui o Telefone"
+                        android:inputType="text" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/corMedia"
+                    android:text="Dados do Pet"
+                    android:textAlignment="center"
+                    android:textColor="@color/corDeFundoEscura"
+                    android:textSize="20dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -120,7 +166,7 @@
                         android:layout_weight="1"
                         android:ems="10"
                         android:hint="digite aqui o nome do Pet"
-                        android:inputType="number" />
+                        android:inputType="text" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -144,7 +190,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:hint="@string/digite_aqui_a_idade_do_paciente"
+                        android:hint="@string/digite_aqui_a_idade_do_pet"
                         android:inputType="number" />
                 </LinearLayout>
 
@@ -153,25 +199,146 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="5">
+                android:layout_weight="1"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="67dp">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="166dp"
+                        android:layout_height="40dp"
+                        android:text="Selecione o tipo: "
+                        android:textAlignment="center"
+                        android:textColor="@color/corDeFundoEscura"
+                        android:textSize="20dp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerHorarios"
+                        android:layout_width="match_parent"
+                        android:layout_height="34dp"
+                        android:layout_gravity="center|start|center_horizontal|top"
+                        android:dropDownSelector="@android:drawable/btn_dropdown"
+                        android:gravity="center"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewPlanoParticular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/corMedia"
+                        android:text="Plano ou Particular"
+                        android:textAlignment="center"
+                        android:textColor="@color/corDeFundoEscura"
+                        android:textSize="20dp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/radioButton"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Unimed" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Convenio Clinica+" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Particular*" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/textViewPlanoObs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="*Verificar os valores junto a recepção"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:id="@+id/textViewTermo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/corMedia"
+                        android:text="Termo de Responsabilidade"
+                        android:textAlignment="center"
+                        android:textColor="@color/corDeFundoEscura"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/textViewAceite"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="@string/Aceite"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <CheckBox
+                            android:id="@+id/checkBox4"
+                            android:layout_width="130dp"
+                            android:layout_height="30dp"
+                            android:text="SMS" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox5"
+                            android:layout_width="130dp"
+                            android:layout_height="30dp"
+                            android:text="TELEFONE" />
+
+                        <CheckBox
+                            android:id="@+id/checkBox6"
+                            android:layout_width="130dp"
+                            android:layout_height="30dp"
+                            android:text="E-MAIL" />
+                    </LinearLayout>
+
+                </LinearLayout>
 
                 <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Selecione uma espécie: "
+                    android:id="@+id/textViewLinha"
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp"
+                    android:text=""
                     android:textAlignment="center"
-                    android:textColor="@color/corDeFundoEscura"
+                    android:textColor="@color/black"
                     android:textSize="20dp" />
 
-                <Spinner
-
-                    android:id="@+id/spinnerHorarios"
+                <Button
+                    android:id="@+id/button"
                     android:layout_width="match_parent"
-                    android:layout_height="34dp" />
+                    android:layout_height="64dp"
+                    android:background="@color/corDeFundoEscura"
+                    android:textSize="25dp"
+                    android:text="SALVAR"
+                    android:textColor="@color/cardview_light_background" />
 
             </LinearLayout>
-
         </LinearLayout>
     </LinearLayout>
-</android.support.constraint.ConstraintLayout>
+</ScrollView>
