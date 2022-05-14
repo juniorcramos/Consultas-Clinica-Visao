@@ -8,18 +8,18 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button agendarConsulta;
+    private Button cadastrarCliente;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         //criando a iteração de clicar no botão e ir para a proxima tela
-        agendarConsulta = findViewById(R.id.buttonAdicionarConsulta);
-        agendarConsulta.setOnClickListener(new View.OnClickListener() {
+        cadastrarCliente = findViewById(R.id.buttonCadastrarCliente);
+        cadastrarCliente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),AgendarConsulta.class);
+                Intent intent = new Intent(getApplicationContext(),CadastroCliente.class);
                 startActivity(intent);
             }
         });
