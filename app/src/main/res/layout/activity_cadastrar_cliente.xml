@@ -165,7 +165,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:hint="digite aqui o nome do Pet"
+                        android:hint="Digite aqui o nome do Pet"
                         android:inputType="text" />
                 </LinearLayout>
 
@@ -190,7 +190,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:hint="@string/digite_aqui_a_idade_do_pet"
+                        android:hint="Digite aqui quantos meses o Pet tem"
                         android:inputType="number" />
                 </LinearLayout>
 
@@ -217,13 +217,12 @@
                         android:textSize="20dp" />
 
                     <Spinner
-                        android:id="@+id/spinnerHorarios"
+                        android:id="@+id/spTipos"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
                         android:layout_gravity="center|start|center_horizontal|top"
                         android:dropDownSelector="@android:drawable/btn_dropdown"
-                        android:gravity="center"
-                        tools:ignore="SpeakableTextPresentCheck" />
+                        android:gravity="center" />
 
                 </LinearLayout>
 
@@ -337,7 +336,6 @@
                     android:textSize="25dp"
                     android:text="SALVAR"
                     android:textColor="@color/cardview_light_background" />
-
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

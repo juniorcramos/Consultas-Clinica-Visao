@@ -91,8 +91,6 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
-    <string name="idade">Idade:</string>
-    <string name="digite_aqui_a_idade_do_pet">Digite aqui a idade do pet</string>
-    <string name="selecione_um_horario">Selecione um Horário</string>
+    <string name="editTextIdade">Digite aqui a idade do pet</string>
     <string name="Aceite">Abaixo, marque as opção pelos meios de comunicação que você gostaria de receber nossas informações diárias a respeito de promoções,informações sobre seu pet caso ele fique sob nossos cuidados, entre outros avisos.</string>
 </resources>

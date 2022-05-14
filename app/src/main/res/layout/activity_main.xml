@@ -23,7 +23,7 @@
         tools:layout_editor_absoluteY="0dp" />
 
     <Button
-        android:id="@+id/buttonCadastrarCliente"
+        android:id="@+id/btCadastrarCliente"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="230dp"
         android:layout_height="65dp"
@@ -71,7 +71,7 @@
         android:textAlignment="center"
         android:textColor="#00474A"
         android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonCadastrarCliente"
+        app:layout_constraintBottom_toTopOf="@+id/btCadastrarCliente"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

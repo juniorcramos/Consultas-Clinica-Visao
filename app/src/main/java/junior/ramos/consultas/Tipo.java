@@ -17,6 +17,9 @@ public class Tipo {
     public Tipo(String nome) {
         this.nome = nome;
     }
+    public Tipo(){
+
+    }
     public Tipo(int id, String nome) {
         this.id = id;
         this.nome = nome;
@@ -50,7 +53,7 @@ public class Tipo {
         bd.close();
     }
 
-    public List<Tipo> getTipos(Context context){
+    public static List<Tipo> getTipos(Context context){
         Banco banco = new Banco(context);
         SQLiteDatabase db = banco.getReadableDatabase();
 
@@ -62,7 +65,7 @@ public class Tipo {
             cursor.moveToFirst();
 
             do{
-                Tipo g = new Tipo(this.id, this.nome);
+                Tipo g = new Tipo();
                 g.setId(  cursor.getInt( 0 ) );
                 g.setNome(  cursor.getString( 1 ) );
                 lista.add( g );

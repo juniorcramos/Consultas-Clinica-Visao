@@ -18,8 +18,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //criando a iteração de clicar no botão e ir para a proxima tela
-        btCadastrarCliente = findViewById(R.id.buttonCadastrarCliente);
+        btCadastrarCliente = findViewById(R.id.btCadastrarCliente);
         btVisualizarCadastros = findViewById(R.id.btVisualizarCadastros);
+
         btCadastrarCliente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         btVisualizarCadastros.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
