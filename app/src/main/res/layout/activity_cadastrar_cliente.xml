@@ -131,7 +131,7 @@
                         android:layout_weight="1"
                         android:ems="10"
                         android:hint="digite aqui o Telefone"
-                        android:inputType="text" />
+                        android:inputType="phone" />
                 </LinearLayout>
 
                 <TextView
@@ -330,7 +330,7 @@
                     android:textSize="20dp" />
 
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/btAdicionar"
                     android:layout_width="match_parent"
                     android:layout_height="64dp"
                     android:background="@color/corDeFundoEscura"
