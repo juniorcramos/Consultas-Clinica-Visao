@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Consultas</string>
+    <string name="cadastrar_cliente" translatable="false">Registrar Cliente</string>
+    <string name="title_activity_agendar_consultas" translatable="false">Programar citas</string>
+    <string name="action_settings" translatable="false">Ajustes</string>
+    <string name="editTextIdade" translatable="false">Ingrese la edad de su mascota aquí</string>
+    <string name="Aceite" translatable="false">" A continuación, consulte las opciones de los medios de comunicación que le gustaría recibir nuestra información diaria sobre promociones, información sobre su mascota si está a nuestro cuidado, entre otros avisos."</string>
+    <string name="clinica_pet_libra" translatable="false">Clínica para mascotas Libra</string>
+    <string name="selecione_abaixo_a_op_o_desejada" translatable="false">Seleccione la opción deseada a continuación.</string>
+    <string name="visualizar_cadastros" translatable="false">Ver entradas</string>
+    <string name="selecione_abaixo_a_opcao_desejada">Seleccione la opción deseada a continuación.</string>
+    <string name="nome">Nombre:</string>
+    <string name="endereco" translatable="false">Direcicíon:</string>
+    <string name="digite_aqui_o_endereco">ingrese la dirección aquí</string>
+    <string name="digite_aqui_o_nome_do_paciente">Ingrese el nombre del tutor aquí</string>
+    <string name="telefone">Teléfono:</string>
+    <string name="digite_aqui_o_telefone">ingrese el teléfono aquí</string>
+    <string name="dados_do_pet">Datos de mascotas</string>
+    <string name="selecione_o_tipo">Seleccione tipo:</string>
+    <string name="plano_ou_particular">" Plano o Privado"</string>
+    <string name="termo_de_responsabilidade">Termino de responsabilidad</string>
+</resources>

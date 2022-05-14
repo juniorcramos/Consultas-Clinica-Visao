@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Queries</string>
+    <string name="title_activity_agendar_consultas" translatable="false">Schedule Appointments</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="editTextIdade" translatable="false">Enter your pet\'s age here</string>
+    <string name="Aceite" translatable="false">" Below, check the options for the means of communication that you would like to receive our daily information about promotions, information about your pet if it is in our care, among other notices."</string>
+    <string name="clinica_pet_libra" translatable="false">Pet Libra Clinic</string>
+    <string name="selecione_abaixo_a_op_o_desejada" translatable="false">" Select the desired option below."</string>
+    <string name="visualizar_cadastros" translatable="false">View entries</string>
+    <string name="cadastrar_cliente" translatable="false">Register Customer</string>
+    <string name="selecione_abaixo_a_opcao_desejada">Select the desired option below.</string>
+    <string name="nome">"Name: "</string>
+    <string name="endereco" translatable="false">Address:</string>
+    <string name="digite_aqui_o_endereco">Enter the address here</string>
+    <string name="digite_aqui_o_nome_do_paciente">Enter the tutor\'s name here</string>
+    <string name="telefone">Telephone:</string>
+    <string name="digite_aqui_o_telefone">enter phone here</string>
+    <string name="dados_do_pet">Pet Data</string>
+    <string name="selecione_o_tipo">Select type:</string>
+    <string name="plano_ou_particular">" Plan or Private"</string>
+    <string name="termo_de_responsabilidade">Statement of responsibility</string>
+</resources>

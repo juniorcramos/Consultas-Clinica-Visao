@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Consultas</string>
+    <string name="title_activity_agendar_consultas" translatable="false">AgendarConsultas</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="editTextIdade" translatable="false">Digite aqui a idade do pet</string>
+    <string name="Aceite" translatable="false">Abaixo, marque as opção pelos meios de comunicação que você gostaria de receber nossas informações diárias a respeito de promoções,informações sobre seu pet caso ele fique sob nossos cuidados, entre outros avisos.</string>
+    <string name="clinica_pet_libra" translatable="false">Clinica Pet Libra</string>
+    <string name="selecione_abaixo_a_op_o_desejada" translatable="false">Selecione abaixo a opção desejada</string>
+    <string name="visualizar_cadastros" translatable="false">Visualizar cadastros</string>
+    <string name="cadastrar_cliente" translatable="false">Cadastrar Cliente</string>
+    <string name="selecione_abaixo_a_opcao_desejada">Selecione abaixo a opção desejada</string>
+    <string name="nome">Nome:</string>
+    <string name="endereco" translatable="false">Endereço:</string>
+    <string name="digite_aqui_o_endereco">Digite aqui o Endereço</string>
+    <string name="digite_aqui_o_nome_do_paciente">Digite aqui o nome do tutor</string>
+    <string name="telefone">Telefone:</string>
+    <string name="digite_aqui_o_telefone">digite aqui o Telefone</string>
+    <string name="dados_do_pet">Dados do Pet</string>
+    <string name="selecione_o_tipo">Selecione o tipo:</string>
+    <string name="plano_ou_particular">Plano ou Particular</string>
+    <string name="termo_de_responsabilidade">Termo de Responsabilidade</string>
+</resources>
