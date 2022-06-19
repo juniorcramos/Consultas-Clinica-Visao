@@ -16,5 +16,6 @@ public class activity_Visualizar_cadastro extends AppCompatActivity {
 
         lvTipos = findViewById(R.id.lvCadastros);
         btnAdicionar = findViewById(R.id.btAdicionar);
+
     }
 }

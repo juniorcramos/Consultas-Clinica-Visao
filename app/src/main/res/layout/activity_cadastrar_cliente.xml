@@ -65,23 +65,22 @@
                     <TextView
                         android:layout_width="83dp"
                         android:layout_height="wrap_content"
-                        android:text="@string/nome"
+                        android:text="Nome:"
                         android:textAlignment="center"
                         android:textColor="@color/black"
-                        android:textSize="15sp">
+                        android:textSize="15dp">
 
                     </TextView>
 
                     <EditText
                         android:id="@+id/editTextTextPersonName"
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:hint="@string/digite_aqui_o_nome_do_paciente"
+                        android:hint="Digite aqui o nome do paciente"
                         android:inputType="textPersonName"
-                        android:singleLine="false"
-                        android:autofillHints="" />
+                        android:singleLine="false" />
                 </LinearLayout>
 
 
@@ -93,10 +92,10 @@
                     <TextView
                         android:layout_width="83dp"
                         android:layout_height="wrap_content"
-                        android:text="@string/endereco"
+                        android:text="Endereço: "
                         android:textAlignment="center"
                         android:textColor="@color/black"
-                        android:textSize="15sp">
+                        android:textSize="15dp">
 
                     </TextView>
 
@@ -106,7 +105,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:hint="@string/digite_aqui_o_endereco"
+                        android:hint="digite aqui o Endereço"
                         android:inputType="text" />
                 </LinearLayout>
 
@@ -118,10 +117,10 @@
                     <TextView
                         android:layout_width="83dp"
                         android:layout_height="wrap_content"
-                        android:text="@string/telefone"
+                        android:text="Telefone: "
                         android:textAlignment="center"
                         android:textColor="@color/black"
-                        android:textSize="15sp">
+                        android:textSize="15dp">
 
                     </TextView>
 
@@ -131,7 +130,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:hint="@string/digite_aqui_o_telefone"
+                        android:hint="digite aqui o Telefone"
                         android:inputType="phone" />
                 </LinearLayout>
 
@@ -140,10 +139,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/corMedia"
-                    android:text="@string/dados_do_pet"
+                    android:text="Dados do Pet"
                     android:textAlignment="center"
                     android:textColor="@color/corDeFundoEscura"
-                    android:textSize="20sp" />
+                    android:textSize="20dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -212,10 +211,10 @@
                         android:id="@+id/textView3"
                         android:layout_width="166dp"
                         android:layout_height="40dp"
-                        android:text="@string/selecione_o_tipo"
+                        android:text="Selecione o tipo: "
                         android:textAlignment="center"
                         android:textColor="@color/corDeFundoEscura"
-                        android:textSize="20sp" />
+                        android:textSize="20dp" />
 
                     <Spinner
                         android:id="@+id/spTipos"
@@ -237,7 +236,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@color/corMedia"
-                        android:text="@string/plano_ou_particular"
+                        android:text="Plano ou Particular"
                         android:textAlignment="center"
                         android:textColor="@color/corDeFundoEscura"
                         android:textSize="20dp" />
@@ -280,7 +279,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@color/corMedia"
-                        android:text="@string/termo_de_responsabilidade"
+                        android:text="Termo de Responsabilidade"
                         android:textAlignment="center"
                         android:textColor="@color/corDeFundoEscura"
                         android:textSize="20dp" />
