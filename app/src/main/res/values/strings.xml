@@ -108,4 +108,13 @@
     <string name="selecione_o_tipo">Selecione o tipo:</string>
     <string name="plano_ou_particular">Plano ou Particular</string>
     <string name="termo_de_responsabilidade">Termo de Responsabilidade</string>
+
+    <string-array name="selecionarTipoAnimal">
+        <item>Selecione o tipo de animal</item>
+        <item>Cães</item>
+        <item>Gatos</item>
+        <item>Aves</item>
+        <item>Répteis</item>
+        <item>Roedores</item>
+    </string-array>
 </resources>

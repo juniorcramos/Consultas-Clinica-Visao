@@ -5,6 +5,7 @@ import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -12,6 +13,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -26,39 +28,16 @@ public class activity_cadastrar_cliente extends AppCompatActivity {
     private TextInputEditText entradaNomePet;
     private TextInputEditText entradaIdadePet;
 
-    private CheckBox checkBoxsms, checkBoxTelefone, checkBoxEmail;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrar_cliente);
 
-        // Entradas de dados por TextInputEditText
-        entradaNomeCliente = findViewById(R.id.entradaNomeCliente);
-        entradaEnderecoCliente = findViewById(R.id.entradaEnderecoCliente);
-        entradaTelefoneCliente = findViewById(R.id.entradaTelefoneCliente);
-        entradaNomePet = findViewById(R.id.entradaNomePet);
-        entradaIdadePet = findViewById(R.id.entradaIdadePet);
-
-        //CheckBox
-        checkBoxsms = findViewById(R.id.checkBoxSms);
-        checkBoxTelefone = findViewById(R.id.checkBoxTelefone);
-        checkBoxEmail = findViewById(R.id.checkBoxEmail);
+        //Inclusão dos códigos para exibir a lista de tipos de pets no Speaner.
+        spTipos = (Spinner) findViewById(R.id.spinnerTiposPet);
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.selecionarTipoAnimal, android.R.layout.simple_spinner_item);//Passa o array para o speaner
+        spTipos.setAdapter(adapter);
     }
 
-    public void checkBoxTermo(){ //Verifica quais itens estão selecionados
-        boolean smsAtivado = checkBoxsms.isChecked(); // método que verifica se está marcado, se estiver, returna true.
-        boolean telefoneAtivado = checkBoxTelefone.isChecked();
-        boolean emailAtivado = checkBoxEmail.isChecked();
-    }
-    public void Cadastrar(){
-
-        checkBoxTermo();
-        String nomeCliente = entradaNomeCliente.getText().toString();
-        String enderecoCliente = entradaEnderecoCliente.getText().toString();
-        String telefoneCliente = entradaTelefoneCliente.getText().toString();
-        String nomePet = entradaNomePet.getText().toString();
-        int idadePet = entradaIdadePet.getTextAlignment();
-    }
 
 }

@@ -4,13 +4,13 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btCadastrarCliente,btVisualizarCadastros;
-    private Spinner spTipos;
+    private Button btCadastrarCliente, btVisualizarCadastros;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         btCadastrarCliente = findViewById(R.id.btCadastrarCliente);
         btVisualizarCadastros = findViewById(R.id.btVisualizarCadastros);
 
+        //código para clicar no botão "cadastrar cliente" na tela principal e ir para a tela de cadastrar cliente
         btCadastrarCliente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        //código para clicar no botão "visualizar cadastros" na tela principal e ir para a tela de visualizar cadastros
         btVisualizarCadastros.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

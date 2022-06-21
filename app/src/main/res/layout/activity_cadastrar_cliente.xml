@@ -219,11 +219,12 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="67dp">
+                    android:layout_height="82dp"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/textView3"
-                        android:layout_width="166dp"
+                        android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:text="Selecione o tipo: "
                         android:textAlignment="center"
@@ -231,12 +232,13 @@
                         android:textSize="20dp" />
 
                     <Spinner
-                        android:id="@+id/spTipos"
+                        android:id="@+id/spinnerTiposPet"
                         android:layout_width="match_parent"
-                        android:layout_height="34dp"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center|start|center_horizontal|top"
                         android:dropDownSelector="@android:drawable/btn_dropdown"
-                        android:gravity="center" />
+                        android:gravity="center"
+                        tools:ignore="SpeakableTextPresentCheck" />
 
                 </LinearLayout>
 
@@ -343,13 +345,14 @@
                     android:textSize="20dp" />
 
                 <Button
-                    android:id="@+id/btAdicionar"
+                    android:id="@+id/salvarCadastro"
                     android:layout_width="match_parent"
                     android:layout_height="64dp"
                     android:background="@color/corDeFundoEscura"
-                    android:textSize="25dp"
+                    android:onClick="salvarCadastro"
                     android:text="SALVAR"
-                    android:textColor="@color/cardview_light_background" />
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="25dp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
