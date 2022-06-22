@@ -6,14 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".activity_Visualizar_cadastro">
 
-    <ListView
-        android:id="@+id/lvCadastros"
-        android:layout_width="match_parent"
-        android:layout_height="600dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"
-        tools:ignore="MissingConstraints" />
-
     <Button
         android:id="@+id/btSalvar"
         android:layout_width="match_parent"
@@ -25,4 +17,5 @@
         tools:layout_editor_absoluteX="-16dp"
         tools:layout_editor_absoluteY="625dp"
         tools:ignore="MissingConstraints" />
+
 </android.support.constraint.ConstraintLayout>

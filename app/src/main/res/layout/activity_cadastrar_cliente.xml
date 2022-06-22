@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/corDeFundoClara"
-    tools:context=".activity_cadastrar_cliente">
+    tools:context=".activity_cadastrar_cliente"
+    android:background="@color/corDeFundoClara">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -65,6 +65,7 @@
                     <TextView
                         android:layout_width="83dp"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:text="Nome:"
                         android:textAlignment="center"
                         android:textColor="@color/black"
@@ -95,6 +96,7 @@
                         android:layout_width="83dp"
                         android:layout_height="wrap_content"
                         android:text="Endereço: "
+                        android:layout_gravity="center"
                         android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="15dp">
@@ -123,6 +125,7 @@
                         android:layout_width="83dp"
                         android:layout_height="wrap_content"
                         android:text="Telefone: "
+                        android:layout_gravity="center"
                         android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="15dp">
@@ -137,7 +140,8 @@
                             android:id="@+id/entradaTelefoneCliente"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="digite aqui o Telefone" />
+                            android:hint="digite aqui o Telefone"
+                            android:inputType="phone" />
                     </android.support.design.widget.TextInputLayout>
 
                 </LinearLayout>
@@ -161,6 +165,7 @@
                         android:layout_width="83dp"
                         android:layout_height="wrap_content"
                         android:text="Nome do Pet: "
+                        android:layout_gravity="center"
                         android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="15dp">
@@ -189,6 +194,7 @@
                         android:layout_width="83dp"
                         android:layout_height="wrap_content"
                         android:text="Idade do Pet"
+                        android:layout_gravity="center"
                         android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="15dp">
@@ -203,7 +209,8 @@
                             android:id="@+id/entradaIdadePet"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Digite aqui quantos meses o pet tem" />
+                            android:hint="Digite aqui quantos meses o pet tem"
+                            android:inputType="number" />
                     </android.support.design.widget.TextInputLayout>
 
                 </LinearLayout>
@@ -226,6 +233,7 @@
                         android:id="@+id/textView3"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
+
                         android:text="Selecione o tipo: "
                         android:textAlignment="center"
                         android:textColor="@color/corDeFundoEscura"
@@ -236,9 +244,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center|start|center_horizontal|top"
+                        android:background="@android:drawable/btn_dropdown"
                         android:dropDownSelector="@android:drawable/btn_dropdown"
-                        android:gravity="center"
-                        tools:ignore="SpeakableTextPresentCheck" />
+                        android:gravity="center|center_vertical"
+                        tools:ignore="SpeakableTextPresentCheck"
+                        tools:visibility="visible" />
 
                 </LinearLayout>
 
@@ -305,6 +315,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="56dp"
+
                         android:text="@string/Aceite"
                         android:textAlignment="center"
                         android:textColor="@color/black"
@@ -349,7 +360,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="64dp"
                     android:background="@color/corDeFundoEscura"
-                    android:onClick="salvarCadastro"
+                    
                     android:text="SALVAR"
                     android:textColor="@color/cardview_light_background"
                     android:textSize="25dp" />
