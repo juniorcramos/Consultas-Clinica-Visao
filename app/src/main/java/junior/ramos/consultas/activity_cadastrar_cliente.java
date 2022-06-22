@@ -29,20 +29,20 @@ public class activity_cadastrar_cliente extends Activity {
         spTipos.setAdapter(adapter);
     }
 
-    public void salvar(View view){
-        TextInputEditText entradaNomeCliente = findViewById(R.id.entradaNomeCliente); // captura o valor digitado na entrada de nome do cliente
+    public void salvarCadastro(View view){
+        entradaNomeCliente = findViewById(R.id.entradaNomeCliente); // captura o valor digitado na entrada de nome do cliente
         String nomeUsuario = Objects.requireNonNull(entradaNomeCliente.getText()).toString();// pega o valor digitado que é editable e transforma em um objeto do tipo String
 
-        TextInputEditText entradaEnderecoCliente = findViewById(R.id.entradaEnderecoCliente);
+        entradaEnderecoCliente = findViewById(R.id.entradaEnderecoCliente);
         String enderecoCliente = entradaEnderecoCliente.getText().toString();
 
-        TextInputEditText entradaTelefoneCliente = findViewById(R.id.entradaTelefoneCliente);
+        entradaTelefoneCliente = findViewById(R.id.entradaTelefoneCliente);
         int telefoneCliente = Integer.parseInt(entradaTelefoneCliente.getText().toString());
 
-        TextInputEditText entradaNomePet = findViewById(R.id.entradaNomePet);
+        entradaNomePet = findViewById(R.id.entradaNomePet);
         String nomePet = Objects.requireNonNull(entradaNomePet.getText()).toString();
 
-        TextInputEditText entradaIdadePet = findViewById(R.id.entradaIdadePet);
+        entradaIdadePet = findViewById(R.id.entradaIdadePet);
         int idadePet = Integer.parseInt(entradaIdadePet.getText().toString());
     }
 }
