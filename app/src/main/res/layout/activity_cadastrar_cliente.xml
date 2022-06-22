@@ -349,7 +349,7 @@
                 <TextView
                     android:id="@+id/textViewLinha"
                     android:layout_width="match_parent"
-                    android:layout_height="74dp"
+                    android:layout_height="30dp"
                     android:text=""
                     android:textAlignment="center"
                     android:textColor="@color/black"
@@ -360,9 +360,27 @@
                     android:layout_width="match_parent"
                     android:layout_height="64dp"
                     android:background="@color/corDeFundoEscura"
-
                     android:text="SALVAR"
                     android:textColor="@color/cardview_light_background"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/textViewLinha1"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    tools:ignore="DuplicateIds" />
+
+                <Button
+                    android:id="@+id/btnLimpar"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:background="@color/corDeFundoEscura"
+                    android:text="LIMPAR"
+                    android:textColor="@color/purple_200"
                     android:textSize="25dp" />
             </LinearLayout>
         </LinearLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "736935700392",
+    "firebase_url": "https://clinicapetlibra-default-rtdb.firebaseio.com",
+    "project_id": "clinicapetlibra",
+    "storage_bucket": "clinicapetlibra.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:736935700392:android:4895f2737c92105a7adf9d",
+        "android_client_info": {
+          "package_name": "junior.ramos.consultas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "736935700392-a9tpmjac40hpkujjkus4inhruml9q5ai.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "junior.ramos.consultas",
+            "certificate_hash": "2dd9d42b9362bd1ba5694888c0ef3faaaef400e7"
+          }
+        },
+        {
+          "client_id": "736935700392-sh9iehdraf7c3ll4q4gv0ea0q50qqul2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzziR4Hxv-pdbOb_QZ3KVAnvLS_va_xVA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "736935700392-sh9iehdraf7c3ll4q4gv0ea0q50qqul2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

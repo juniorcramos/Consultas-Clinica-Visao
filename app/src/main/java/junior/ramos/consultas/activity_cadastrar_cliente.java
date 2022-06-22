@@ -27,22 +27,30 @@ public class activity_cadastrar_cliente extends Activity {
         spTipos = (Spinner) findViewById(R.id.spinnerTiposPet);
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.selecionarTipoAnimal, android.R.layout.simple_list_item_1);//Passa o array para o speaner
         spTipos.setAdapter(adapter);
+
+        entradaNomeCliente = findViewById(R.id.entradaNomeCliente); // captura o valor digitado na entrada de nome do cliente
+        entradaEnderecoCliente = findViewById(R.id.entradaEnderecoCliente);
+        entradaTelefoneCliente = findViewById(R.id.entradaTelefoneCliente);
+        entradaNomePet = findViewById(R.id.entradaNomePet);
+        entradaIdadePet = findViewById(R.id.entradaIdadePet);
     }
 
     public void salvarCadastro(View view){
-        entradaNomeCliente = findViewById(R.id.entradaNomeCliente); // captura o valor digitado na entrada de nome do cliente
+
         String nomeUsuario = Objects.requireNonNull(entradaNomeCliente.getText()).toString();// pega o valor digitado que é editable e transforma em um objeto do tipo String
-
-        entradaEnderecoCliente = findViewById(R.id.entradaEnderecoCliente);
         String enderecoCliente = entradaEnderecoCliente.getText().toString();
-
-        entradaTelefoneCliente = findViewById(R.id.entradaTelefoneCliente);
         int telefoneCliente = Integer.parseInt(entradaTelefoneCliente.getText().toString());
-
-        entradaNomePet = findViewById(R.id.entradaNomePet);
         String nomePet = Objects.requireNonNull(entradaNomePet.getText()).toString();
-
-        entradaIdadePet = findViewById(R.id.entradaIdadePet);
         int idadePet = Integer.parseInt(entradaIdadePet.getText().toString());
     }
+
+    public void limpar(View view){
+        entradaNomeCliente.setText("");
+        entradaEnderecoCliente.setText("");
+        entradaTelefoneCliente.setText("");
+        entradaNomePet.setText("");
+        entradaIdadePet.setText("");
+    }
+
+
 }
