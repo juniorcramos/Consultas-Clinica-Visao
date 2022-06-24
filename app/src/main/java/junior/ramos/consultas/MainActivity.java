@@ -1,16 +1,15 @@
 package junior.ramos.consultas;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button btCadastrarCliente, btVisualizarCadastros;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

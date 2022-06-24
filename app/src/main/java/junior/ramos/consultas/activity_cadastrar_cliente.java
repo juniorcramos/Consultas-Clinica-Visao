@@ -2,10 +2,14 @@ package junior.ramos.consultas;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.design.widget.TextInputEditText;
+import com.google.android.material.textfield.TextInputEditText;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.Spinner;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Objects;
 
@@ -17,6 +21,9 @@ public class activity_cadastrar_cliente extends Activity {
     private TextInputEditText entradaTelefoneCliente;
     private TextInputEditText entradaNomePet;
     private TextInputEditText entradaIdadePet;
+    private CheckBox checkBoxSms, checkBoxTelefone, checkBoxEmail;
+    private DatabaseReference referenciaBancoDeDados = FirebaseDatabase.getInstance().getReference();// referencia a raiz do banco de dados, permite salvar dados no firebase.
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,15 +40,35 @@ public class activity_cadastrar_cliente extends Activity {
         entradaTelefoneCliente = findViewById(R.id.entradaTelefoneCliente);
         entradaNomePet = findViewById(R.id.entradaNomePet);
         entradaIdadePet = findViewById(R.id.entradaIdadePet);
+
+        //checkbox
+        checkBoxSms = findViewById(R.id.checkBoxSms);
+        checkBoxTelefone = findViewById(R.id.checkBoxTelefone);
+        checkBoxEmail = findViewById(R.id.checkBoxEmail);
+
+        //firebase
+       //
+    }
+    public void checkBoxes(){
+        boolean checkSms = checkBoxSms.isChecked();
+        boolean checkTelefone = checkBoxTelefone.isChecked();
+        boolean checkEmail = checkBoxEmail.isChecked();
     }
 
     public void salvarCadastro(View view){
+        DatabaseReference clientes = referenciaBancoDeDados.child("Cadastro");// Cria o banco com o nome de Cadastro no Firebase
+        Cliente cliente = new Cliente();
+        Cadastro cadastro = new Cadastro(cliente);//Cria um objeto do tipo cadastro com as informações do cliente e de seu pet
 
-        String nomeUsuario = Objects.requireNonNull(entradaNomeCliente.getText()).toString();// pega o valor digitado que é editable e transforma em um objeto do tipo String
-        String enderecoCliente = entradaEnderecoCliente.getText().toString();
-        int telefoneCliente = Integer.parseInt(entradaTelefoneCliente.getText().toString());
-        String nomePet = Objects.requireNonNull(entradaNomePet.getText()).toString();
-        int idadePet = Integer.parseInt(entradaIdadePet.getText().toString());
+        //checkBoxes();
+        cadastro.cliente.setNomeCliente(entradaNomeCliente.getText().toString());// pega o valor digitado que é editable e transforma em um objeto do tipo String
+        cadastro.cliente.setEnderecoCliente(entradaEnderecoCliente.getText().toString());
+        cadastro.cliente.setTelefoneCliente(entradaTelefoneCliente.getText().toString());
+        cadastro.cliente.setNomePet(entradaNomePet.getText().toString());
+        int idadePet =  Integer.parseInt (entradaIdadePet.getText().toString());
+        cadastro.cliente.setIdadePet(idadePet);
+
+        clientes.child(cadastro.cliente.getNomeCliente()).setValue(cadastro);
     }
 
     public void limpar(View view){
@@ -51,6 +78,4 @@ public class activity_cadastrar_cliente extends Activity {
         entradaNomePet.setText("");
         entradaIdadePet.setText("");
     }
-
-
 }
