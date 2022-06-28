@@ -1,15 +1,17 @@
-package junior.ramos.consultas;
+package junior.ramos.consultas.Telas;
 
 import android.content.Intent;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+import junior.ramos.consultas.R;
+
+public class Tela_principal extends AppCompatActivity {
 
     private Button btCadastrarCliente, btVisualizarCadastros;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         btCadastrarCliente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),activity_cadastrar_cliente.class);
+                Intent intent = new Intent(getApplicationContext(), Tela_cadastrar_cliente.class);
                 startActivity(intent);
             }
         });
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         btVisualizarCadastros.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),activity_Visualizar_cadastro.class);
+                Intent intent = new Intent(getApplicationContext(), Tela_Visualizar_cadastro.class);
                 startActivity(intent);
             }
         });

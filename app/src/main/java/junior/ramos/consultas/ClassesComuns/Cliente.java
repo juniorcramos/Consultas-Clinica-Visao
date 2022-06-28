@@ -1,4 +1,4 @@
-package junior.ramos.consultas;
+package junior.ramos.consultas.ClassesComuns;
 
 public class Cliente {
 
@@ -6,25 +6,18 @@ public class Cliente {
     private String enderecoCliente;
     private String telefoneCliente;
     private String nomePet;
-    private int idadePet;
+    private String idadePet;
+    //private CheckBox sms, telefone, email;
 
-    public Cliente(String nome, String endereco, String telefone, String nomePet, int idadePet){
-        this.nomeCliente = nome;
-        this.enderecoCliente = endereco;
-        this.telefoneCliente = telefone;
+    public Cliente(){}
+    public Cliente(String nomeCliente, String enderecoCliente, String telefoneCliente, String nomePet, String idadePet){
+        this.nomeCliente = nomeCliente;
+        this.enderecoCliente = enderecoCliente;
+        this.telefoneCliente = telefoneCliente;
         this.nomePet = nomePet;
         this.idadePet = idadePet;
     }
-    public Cliente(){}
-    public void setNomeCliente(String nome){
-        this.nomeCliente = nome;
-    }
-    public void setEnderecoCliente(String enderecoCliente) {
-        this.enderecoCliente = enderecoCliente;
-    }
-    public void setTelefoneCliente(String telefoneCliente) {
-        this.telefoneCliente = telefoneCliente;
-    }
+
     public String getNomeCliente() {
         return nomeCliente;
     }
@@ -34,20 +27,26 @@ public class Cliente {
     public String getTelefoneCliente() {
         return telefoneCliente;
     }
-
     public String getNomePet() {
         return nomePet;
     }
-
-    public void setNomePet(String nomePet) {
-        this.nomePet = nomePet;
-    }
-
-    public int getIdadePet() {
+    public String getIdadePet() {
         return idadePet;
     }
 
-    public void setIdadePet(int idadePet) {
+    public void setNomeCliente(String nome){
+        this.nomeCliente = nome;
+    }
+    public void setEnderecoCliente(String enderecoCliente) {
+        this.enderecoCliente = enderecoCliente;
+    }
+    public void setTelefoneCliente(String telefoneCliente) {
+        this.telefoneCliente = telefoneCliente;
+    }
+    public void setNomePet(String nomePet) {
+        this.nomePet = nomePet;
+    }
+    public void setIdadePet(String idadePet) {
         this.idadePet = idadePet;
     }
 

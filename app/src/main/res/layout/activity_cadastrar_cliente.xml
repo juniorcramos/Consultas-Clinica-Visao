@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_cadastrar_cliente"
+    tools:context=".Telas.Tela_cadastrar_cliente"
     android:background="@color/corDeFundoClara">
 
     <LinearLayout

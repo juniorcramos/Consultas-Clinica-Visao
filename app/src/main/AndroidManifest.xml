@@ -14,16 +14,16 @@
         android:theme="@style/Theme.Consultas"
         tools:targetApi="31">
         <activity
-            android:name=".activity_Visualizar_cadastro"
+            android:name=".Telas.Tela_Visualizar_cadastro"
             android:exported="false" />
         <activity
-            android:name=".activity_cadastrar_cliente"
+            android:name=".Telas.Tela_cadastrar_cliente"
             android:exported="false" />
         <activity
             android:name=".AgendarConsulta"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Telas.Tela_principal"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

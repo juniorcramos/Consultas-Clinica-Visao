@@ -1,19 +1,19 @@
-package junior.ramos.consultas;
+package junior.ramos.consultas.Telas;
 
 import android.app.Activity;
 import android.os.Bundle;
-import com.google.android.material.textfield.TextInputEditText;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.Spinner;
 
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.util.Objects;
-
-public class activity_cadastrar_cliente extends Activity {
+import junior.ramos.consultas.ClassesComuns.Cliente;
+import junior.ramos.consultas.R;
+public class Tela_cadastrar_cliente extends Activity {
 
     Spinner spTipos;
     private TextInputEditText entradaNomeCliente;
@@ -21,16 +21,16 @@ public class activity_cadastrar_cliente extends Activity {
     private TextInputEditText entradaTelefoneCliente;
     private TextInputEditText entradaNomePet;
     private TextInputEditText entradaIdadePet;
-    private CheckBox checkBoxSms, checkBoxTelefone, checkBoxEmail;
-    private DatabaseReference referenciaBancoDeDados = FirebaseDatabase.getInstance().getReference();// referencia a raiz do banco de dados, permite salvar dados no firebase.
-
+    private CheckBox checkBoxSms;
+    private CheckBox checkBoxTelefone;
+    private CheckBox checkBoxEmail;
+    private DatabaseReference referenciaBanco = FirebaseDatabase.getInstance().getReference();// referencia a raiz do banco de dados, permite salvar dados no firebase.
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrar_cliente);
 
-        //Inclusão dos códigos para exibir a lista de tipos de pets no Speaner.
         spTipos = (Spinner) findViewById(R.id.spinnerTiposPet);
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.selecionarTipoAnimal, android.R.layout.simple_list_item_1);//Passa o array para o speaner
         spTipos.setAdapter(adapter);
@@ -46,8 +46,6 @@ public class activity_cadastrar_cliente extends Activity {
         checkBoxTelefone = findViewById(R.id.checkBoxTelefone);
         checkBoxEmail = findViewById(R.id.checkBoxEmail);
 
-        //firebase
-       //
     }
     public void checkBoxes(){
         boolean checkSms = checkBoxSms.isChecked();
@@ -56,19 +54,18 @@ public class activity_cadastrar_cliente extends Activity {
     }
 
     public void salvarCadastro(View view){
-        DatabaseReference clientes = referenciaBancoDeDados.child("Cadastro");// Cria o banco com o nome de Cadastro no Firebase
+        DatabaseReference clientes = referenciaBanco.child("Cadastro");// Cria o banco com o nome de Cadastro no Firebase
         Cliente cliente = new Cliente();
-        Cadastro cadastro = new Cadastro(cliente);//Cria um objeto do tipo cadastro com as informações do cliente e de seu pet
 
-        //checkBoxes();
-        cadastro.cliente.setNomeCliente(entradaNomeCliente.getText().toString());// pega o valor digitado que é editable e transforma em um objeto do tipo String
-        cadastro.cliente.setEnderecoCliente(entradaEnderecoCliente.getText().toString());
-        cadastro.cliente.setTelefoneCliente(entradaTelefoneCliente.getText().toString());
-        cadastro.cliente.setNomePet(entradaNomePet.getText().toString());
-        int idadePet =  Integer.parseInt (entradaIdadePet.getText().toString());
-        cadastro.cliente.setIdadePet(idadePet);
+        cliente.setNomeCliente(entradaNomeCliente.getText().toString());// pega o valor digitado que é editable e transforma em um objeto do tipo String
+        cliente.setEnderecoCliente(entradaEnderecoCliente.getText().toString());
+        cliente.setTelefoneCliente(entradaTelefoneCliente.getText().toString());
+        cliente.setNomePet(entradaNomePet.getText().toString());
+        cliente.setIdadePet(entradaIdadePet.getText().toString());
+        //cadastro.cliente.setSms(checkBoxSms);
 
-        clientes.child(cadastro.cliente.getNomeCliente()).setValue(cadastro);
+        //clientes.child(cliente.getNomeCliente()).setValue(cliente);
+        clientes.push().setValue(cliente);
     }
 
     public void limpar(View view){

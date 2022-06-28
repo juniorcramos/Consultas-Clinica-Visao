@@ -4,18 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_Visualizar_cadastro">
+    tools:context=".Telas.Tela_Visualizar_cadastro">
 
-    <Button
-        android:id="@+id/btSalvar"
-        android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:background="@color/corDeFundoEscura"
-        android:text="ADICIONAR"
-        android:textColor="@color/cardview_light_background"
-        android:textSize="25dp"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="625dp"
-        tools:ignore="MissingConstraints" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewClientes"
+        android:layout_width="409dp"
+        android:layout_height="623dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
