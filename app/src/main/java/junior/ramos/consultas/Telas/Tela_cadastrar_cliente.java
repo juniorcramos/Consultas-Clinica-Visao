@@ -1,12 +1,14 @@
 package junior.ramos.consultas.Telas;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.database.DatabaseReference;
@@ -66,6 +68,10 @@ public class Tela_cadastrar_cliente extends Activity {
         cliente.setIdadePet(entradaIdadePet.getText().toString());
 
         clientes.push().setValue(cliente);
+        Toast.makeText(Tela_cadastrar_cliente.this, "Cadastro salvo!", Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent(getApplicationContext(), Tela_Visualizar_cadastro.class);
+        startActivity(intent);
 
     }
 
