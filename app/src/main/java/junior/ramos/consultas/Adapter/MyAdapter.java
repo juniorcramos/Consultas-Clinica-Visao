@@ -34,11 +34,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyAdapter.ViewHolder holder, int position) {
         Cliente cliente = lista.get(position);
-        holder.nomeCliente.setText(cliente.getNomeCliente());
-        holder.endereco.setText(cliente.getEnderecoCliente());
-        holder.telefone.setText(cliente.getTelefoneCliente());
-        holder.nomePet.setText(cliente.getNomePet());
-        holder.idadePet.setText(cliente.getIdadePet());
+        //holder.nomeCliente.setText(cliente.getNomeCliente());
+        //holder.endereco.setText(cliente.getEnderecoCliente());
+        //holder.telefone.setText(cliente.getTelefoneCliente());
+        //holder.nomePet.setText(cliente.getNomePet());
+        //holder.idadePet.setText(cliente.getIdadePet());
     }
 
     @Override
