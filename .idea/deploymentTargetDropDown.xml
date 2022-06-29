@@ -6,13 +6,13 @@
         <type value="RUNNING_DEVICE_TARGET" />
         <deviceKey>
           <Key>
-            <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="C:\Users\Junior\.android\avd\S22_ULTRA_API_33.avd" />
+            <type value="SERIAL_NUMBER" />
+            <value value="RX8N8042P5R" />
           </Key>
         </deviceKey>
       </Target>
     </runningDeviceTargetSelectedWithDropDown>
-    <timeTargetWasSelectedWithDropDown value="2022-06-29T21:22:28.227915300Z" />
+    <timeTargetWasSelectedWithDropDown value="2022-06-29T22:35:01.810885800Z" />
     <runningDeviceTargetsSelectedWithDialog>
       <Target>
         <type value="RUNNING_DEVICE_TARGET" />
