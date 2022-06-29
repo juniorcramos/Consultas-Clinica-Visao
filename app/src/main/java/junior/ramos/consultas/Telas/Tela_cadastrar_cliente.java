@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -21,6 +22,7 @@ public class Tela_cadastrar_cliente extends Activity {
     private TextInputEditText entradaTelefoneCliente;
     private TextInputEditText entradaNomePet;
     private TextInputEditText entradaIdadePet;
+    private RadioGroup planos;
     private CheckBox checkBoxSms;
     private CheckBox checkBoxTelefone;
     private CheckBox checkBoxEmail;
@@ -40,8 +42,8 @@ public class Tela_cadastrar_cliente extends Activity {
         entradaTelefoneCliente = findViewById(R.id.entradaTelefoneCliente);
         entradaNomePet = findViewById(R.id.entradaNomePet);
         entradaIdadePet = findViewById(R.id.entradaIdadePet);
+        planos = findViewById(R.id.btPlano_Convenio);
 
-        //checkbox
         checkBoxSms = findViewById(R.id.checkBoxSms);
         checkBoxTelefone = findViewById(R.id.checkBoxTelefone);
         checkBoxEmail = findViewById(R.id.checkBoxEmail);
@@ -54,7 +56,7 @@ public class Tela_cadastrar_cliente extends Activity {
     }
 
     public void salvarCadastro(View view){
-        DatabaseReference clientes = referenciaBanco.child("Cadastro");// Cria o banco com o nome de Cadastro no Firebase
+        DatabaseReference clientes = referenciaBanco.child("Clientes");// Cria o banco com o nome de Cadastro no Firebase
         Cliente cliente = new Cliente();
 
         cliente.setNomeCliente(entradaNomeCliente.getText().toString());// pega o valor digitado que é editable e transforma em um objeto do tipo String
@@ -62,9 +64,7 @@ public class Tela_cadastrar_cliente extends Activity {
         cliente.setTelefoneCliente(entradaTelefoneCliente.getText().toString());
         cliente.setNomePet(entradaNomePet.getText().toString());
         cliente.setIdadePet(entradaIdadePet.getText().toString());
-        //cadastro.cliente.setSms(checkBoxSms);
 
-        //clientes.child(cliente.getNomeCliente()).setValue(cliente);
         clientes.push().setValue(cliente);
     }
 

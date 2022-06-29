@@ -29,7 +29,8 @@
                 android:layout_height="41dp"
                 android:layout_weight="3"
                 android:text="Nome do Cliente"
-                android:textSize="20sp"
+                android:textColor="#004D40"
+                android:textSize="30sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -58,7 +59,7 @@
                 android:layout_weight="1"
                 android:background="@color/white"
                 android:text="Endereço"
-                android:textSize="14sp" />
+                android:textSize="22sp" />
 
         </LinearLayout>
 

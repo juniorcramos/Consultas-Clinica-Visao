@@ -297,11 +297,12 @@
                         android:textSize="20dp" />
 
                     <RadioGroup
+                        android:id="@+id/btPlano_Convenio"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
                         <RadioButton
-                            android:id="@+id/radioButton"
+                            android:id="@+id/rbUnimed"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
@@ -309,14 +310,14 @@
                             android:text="Unimed" />
 
                         <RadioButton
-                            android:id="@+id/radioButton2"
+                            android:id="@+id/rbConvenioClinica"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:buttonTint="#01B875"
                             android:text="Convenio Clinica+" />
 
                         <RadioButton
-                            android:id="@+id/radioButton3"
+                            android:id="@+id/rbParticular"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:buttonTint="#01B875"

@@ -5,6 +5,7 @@ plugins {
 
 android {
     compileSdk 32
+    viewBinding{enabled = true;}
 
     defaultConfig {
         applicationId "junior.ramos.consultas"
