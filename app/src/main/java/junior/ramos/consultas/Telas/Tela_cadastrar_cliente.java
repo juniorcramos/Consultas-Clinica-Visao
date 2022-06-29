@@ -66,6 +66,7 @@ public class Tela_cadastrar_cliente extends Activity {
         cliente.setIdadePet(entradaIdadePet.getText().toString());
 
         clientes.push().setValue(cliente);
+
     }
 
     public void limpar(View view){
